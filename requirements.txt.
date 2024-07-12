@@ -7,3 +7,4 @@ streamlit ==1.31.1
 import requests
 fruityvice_response = requests.get("https://fruitvice.com/api/fruit/watermelon")
 st.text(fruityvice_response.Json())
+fv_df = st.dataframe(data=fruityvice_response.json(),use_container_width= True)
